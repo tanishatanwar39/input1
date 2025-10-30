@@ -1,0 +1,174 @@
+/* Simple, clean styles for the feedback form with color tokens */
+:root {
+	--bg: #f8fafc;
+	--surface: #ffffff;
+	--text: #0f172a;
+	--muted: #64748b;
+	--border: #e6edf3;
+	--primary: #2563eb;
+	--primary-2: #4f46e5;
+	--focus: rgba(96,165,250,0.12);
+	--success: #16a34a;
+	--danger: #dc2626;
+}
+
+.feedback-form {
+	max-width: 680px;
+	margin: 18px auto;
+	padding: 20px 22px;
+	border-radius: 10px;
+	background: var(--surface);
+	box-shadow: 0 6px 20px rgba(16,24,40,0.06);
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	color: var(--text);
+}
+
+/* page-level layout */
+.feedback-page {
+	min-height: 100vh;
+	padding: 40px 18px;
+	background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 40%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* subtle entrance animation */
+@keyframes fadeInUp {
+	from { opacity: 0; transform: translateY(8px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.feedback-form, .feedback-item {
+	animation: fadeInUp .28s ease both;
+}
+
+.feedback-form h2 {
+	margin: 0 0 12px 0;
+	font-size: 20px;
+	color: var(--text);
+}
+
+.feedback-form .field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 12px;
+}
+
+.feedback-form label {
+	font-size: 13px;
+	margin-bottom: 6px;
+	color: var(--muted);
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+	padding: 10px 12px;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	font-size: 14px;
+	color: var(--text);
+	outline: none;
+	transition: box-shadow .12s ease, border-color .12s ease, transform .06s ease;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+	color: rgba(15,23,42,0.35);
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+	border-color: var(--primary);
+	box-shadow: 0 0 0 4px var(--focus);
+}
+
+.feedback-form .actions {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 14px;
+}
+
+.feedback-form .btn {
+	background: linear-gradient(90deg,var(--primary),var(--primary-2));
+	color: white;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	box-shadow: 0 6px 18px rgba(79,70,229,0.12);
+}
+
+.feedback-form .btn:hover {
+	transform: translateY(-2px);
+}
+
+.feedback-form .btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	transform: none;
+}
+
+.feedback-form .btn:active { transform: translateY(1px); }
+
+.feedback-form .status { font-size: 14px; }
+.feedback-form .muted { color: var(--muted); }
+.feedback-form .success { color: var(--success); font-weight: 600; }
+.feedback-form .error { color: var(--danger); font-weight: 600; }
+
+@media (max-width: 520px) {
+	.feedback-form { padding: 14px; margin: 10px; }
+}
+
+.feedback-list {
+	max-width: 680px;
+	margin: 8px auto 40px;
+	padding: 8px 12px;
+}
+
+.feedback-list h3 {
+	margin: 6px 0 10px;
+	font-size: 16px;
+	color: var(--text);
+}
+
+.feedback-list .empty {
+	color: var(--muted);
+	padding: 8px 0;
+}
+
+.feedback-item {
+	border: 1px solid var(--border);
+	padding: 10px 12px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	background: #fbfdff;
+}
+
+.feedback-item .row { display:flex; justify-content:space-between; align-items:center; gap:12px }
+.feedback-item .who { display:flex; flex-direction:column }
+.feedback-item .meta { font-size:12px; color:var(--muted); margin-top:4px }
+.feedback-item .small { font-size:12px }
+.feedback-item .when { font-size:12px; color:var(--muted) }
+.feedback-item .subject { margin-top:8px; font-weight:600 }
+.feedback-item .answers { margin-top:8px; color:var(--text) }
+
+.feedback-item .badge {
+	display:inline-block;
+	padding:4px 8px;
+	border-radius:999px;
+	background: linear-gradient(90deg,var(--primary),var(--primary-2));
+	color:white;
+	font-size:12px;
+	font-weight:600;
+}
+
+.feedback-item .email-link { color: var(--primary); text-decoration: none; }
+.feedback-item .email-link:hover { text-decoration: underline; }
+
+.feedback-list h3 { display:flex; align-items:center; gap:10px }
+.feedback-list h3::after { content:''; flex:1; height:1px; background:var(--border); margin-left:8px }
+

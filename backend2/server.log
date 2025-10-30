@@ -1,0 +1,7 @@
+
+> backend2@1.0.0 start
+> node server.js
+
+backend2: server listening on http://localhost:4000
+backend2: connected to MongoDB
+Terminated

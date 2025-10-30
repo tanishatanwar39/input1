@@ -1,0 +1,25 @@
+/* Auth pages styles (Login / Account) */
+.auth-root {
+  min-height: 60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 28px 12px;
+}
+.auth-card{
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(16,24,40,0.06);
+}
+.auth-card h2 { margin: 0 0 6px }
+.auth-card .muted { color: #64748b; margin-bottom:12px }
+.auth-card label { display:block; margin-top:8px; font-size:13px; color:#334155 }
+.auth-card input{ width:100%; padding:10px 12px; margin-top:6px; border-radius:8px; border:1px solid #e6edf3 }
+.auth-card .actions{ margin-top:14px }
+.auth-card .btn{ background: linear-gradient(90deg,#2563eb,#4f46e5); color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; width:100%; font-weight:700 }
+.auth-card .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(79,70,229,0.12) }
+.auth-card .error{ color:#dc2626; margin-top:8px }
+.link-btn{ background:none;border:none;color:#2563eb;cursor:pointer;padding:6px 8px;font-weight:600 }

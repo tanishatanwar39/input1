@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      Allow the frontend to connect to the local backend during development.
+      This grants connect-src to localhost:4000 so fetch/websocket calls to the API are allowed.
+      Tighten this for production to only the required origins.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; connect-src 'self' http://localhost:4000 ws://localhost:4000; script-src 'self' 'unsafe-inline' 'unsafe-eval'"> 
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="alternate icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backend1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

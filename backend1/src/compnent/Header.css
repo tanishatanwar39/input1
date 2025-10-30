@@ -1,0 +1,33 @@
+/* Header styles */
+.app-header{ display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:linear-gradient(90deg,#ffffff,#f8fafc); box-shadow:0 6px 18px rgba(16,24,40,0.02)}
+.app-header .brand a{ color:var(--text); text-decoration:none; font-weight:700 }
+.app-header nav{ display:flex; gap:12px; align-items:center }
+.app-header nav a{ color:#334155; text-decoration:none; padding:8px 10px; border-radius:8px }
+.app-header nav a:hover{ background:rgba(37,99,235,0.06) }
+.login-btn{
+	display:inline-block;
+	padding:10px 16px; /* match form .btn */
+	border-radius:8px;
+	background: linear-gradient(90deg,var(--primary, #2563eb),var(--primary-2, #4f46e5));
+	color:#fff !important;
+	text-decoration:none;
+	font-weight:700;
+	border: none;
+	box-shadow: 0 6px 18px rgba(79,70,229,0.12);
+	transition: transform .12s ease, box-shadow .12s ease;
+}
+.login-btn:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(79,70,229,0.16) }
+.link-btn{
+	background: none;
+	border: none;
+	color: var(--primary, #2563eb);
+	cursor: pointer;
+	padding: 0 6px;
+	font-weight: 600;
+	text-decoration: underline;
+	background: transparent;
+}
+.link-btn:hover{
+	opacity: 0.9;
+	transform: none;
+}
