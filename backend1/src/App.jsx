@@ -5,16 +5,17 @@ import Form from './compnent/Form'
 import Login from './compnent/Login'
 import Account from './compnent/Account'
 
-function App(){
+function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Form/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/account" element={<Account/>} />
-      </Routes>
-    </BrowserRouter>
+  <Header />
+  <Routes>
+    <Route path="/login" element={<Login />} />
+    <Route path="/form" element={<Form />} />
+    {/* <Route path="/account" element={<Account />} /> */}
+  </Routes>
+</BrowserRouter>
+
   )
 }
 

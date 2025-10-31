@@ -12,12 +12,12 @@ function Header(){
 
         return(
                 <header className="app-header">
-                    <div className="brand"><Link to="/">Student Feedback</Link></div>
+                    {/* <div className="brand"><Link to="/">Student Feedback</Link></div> */}
                     <nav>
-                        <Link to="/">Home</Link>
+                        {/* <Link to="/">Home</Link> */}
                         {user ? (
                             <>
-                                <Link to="/account">Account</Link>
+                                {/* <Link to="/account">Account</Link> */}
                                 <button className="link-btn" onClick={handleLogout}>Logout</button>
                             </>
                         ) : (
